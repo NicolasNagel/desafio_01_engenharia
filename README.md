@@ -7,42 +7,40 @@ O objetivo é realizar a **extração, validação, transformação e carga** de
 
 ## 📂 Estrutura do Projeto
 
+```bash
 DESAFIO_01_ENGENHARIA/
 ├── dags/
-│ ├── pipeline.py # DAG principal do Airflow
-│ └── .airflowignore
+│   ├── pipeline.py              
+│   └── .airflowignore
 │
 ├── include/
-│ ├── controllers/
-│ │ ├── controller.py # Camada de controle (extração e orquestração)
-│ │ └── init.py
-│ │
-│ ├── database/
-│ │ ├── db.py # Configuração da conexão com PostgreSQL
-│ │ ├── db_models.py # Modelos ORM com SQLAlchemy
-│ │ └── init.py
-│ │
-│ └── schemas/
-│ ├── schema.py # Validação de dados com Pydantic
-│ └── init.py
+│   ├── controllers/
+│   │   ├── controller.py        
+│   │   └── __init__.py
+│   │
+│   ├── database/
+│   │   ├── db.py                
+│   │   ├── db_models.py         
+│   │   └── __init__.py
+│   │
+│   └── schemas/
+│       ├── schema.py            
+│       └── __init__.py
 │
-├── plugins/ # Plugins customizados (caso necessários)
+├── plugins/                     
 │
 ├── tests/
-│ └── dags/
-│ └── test_dag_example.py # Teste básico de execução da DAG
+│   └── dags/
+│       └── test_dag_example.py  
 │
-├── Dockerfile # Configuração do ambiente Docker
-├── airflow_settings.yaml # Definições de conexões e variáveis do Airflow
-├── .env # Variáveis de ambiente (credenciais e configs)
-├── .gitignore # Arquivos ignorados pelo Git
+├── Dockerfile                   
+├── airflow_settings.yaml        
+├── .env                         
+├── .gitignore                   
 ├── .dockerignore
-└── .python-version # Versão utilizada no ambiente virtual
+└── .python-version
 
-
----
-
-## 🧠 Fluxo do Pipeline
+## Fluxo do Pipeline ##
 
 1. **Extração (Extract)**  
    A DAG coleta dados da cotação do Bitcoin através de uma API pública.  
