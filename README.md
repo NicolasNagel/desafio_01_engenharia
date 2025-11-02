@@ -3,42 +3,6 @@
 Este projeto implementa um **pipeline de dados automatizado** utilizando **Apache Airflow**, **Python**, **SQLAlchemy** e **Render (PostgreSQL hospedado)**.  
 O objetivo é realizar a **extração, validação, transformação e carga** de dados de cotação do **Bitcoin (BTC)** em relação ao **Dólar (USD)**, salvando-os em um banco de dados relacional.
 
----
-
-## 📂 Estrutura do Projeto
-
-```bash
-DESAFIO_01_ENGENHARIA/
-├── dags/
-│   ├── pipeline.py              
-│   └── .airflowignore
-│
-├── include/
-│   ├── controllers/
-│   │   ├── controller.py        
-│   │   └── __init__.py
-│   │
-│   ├── database/
-│   │   ├── db.py                
-│   │   ├── db_models.py         
-│   │   └── __init__.py
-│   │
-│   └── schemas/
-│       ├── schema.py            
-│       └── __init__.py
-│
-├── plugins/                     
-│
-├── tests/
-│   └── dags/
-│       └── test_dag_example.py  
-│
-├── Dockerfile                   
-├── airflow_settings.yaml        
-├── .env                         
-├── .gitignore                   
-├── .dockerignore
-└── .python-version
 
 ## Fluxo do Pipeline ##
 
